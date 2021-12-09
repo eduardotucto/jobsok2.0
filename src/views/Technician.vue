@@ -18,7 +18,11 @@ import Technician from "@/apis/Technician"
 export default {
     data() {
         return {
-            technicianData: {}
+            technicianData: {
+                city: {
+                    description: '',
+                }
+            }
         }
     },
     methods: {

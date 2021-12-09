@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import PageLayout from "@/views/Layout/PageLayout.vue";
+import AuthLayout from "@/views/Layout/AuthLayout.vue";
 
 const routes = [
   {
@@ -16,6 +17,18 @@ const routes = [
         path: "/technician/:idTechnician",
         name: "technician",
         component: () => import("@/views/Technician.vue"),
+      },
+    ],
+  },
+  {
+    path: "/",
+    redirect: "login",
+    component: AuthLayout,
+    children: [
+      {
+        path: "/login",
+        name: "login",
+        component: () => import("../views/Auth/Login.vue"),
       },
     ],
   },

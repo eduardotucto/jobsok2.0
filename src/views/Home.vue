@@ -85,6 +85,7 @@ export default {
             Technicians.all()
             .then((resp) => {
                 this.occupationsList = resp.data.professions;
+                console.log(resp.data.professions);
                 this.techniciansList = resp.data.technicians;
                 this.initializeCarousel();
             }).catch((err) => {
