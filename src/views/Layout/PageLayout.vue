@@ -8,7 +8,7 @@
                 <ul>
                     <li><router-link to="/">Cliente</router-link></li> |
                     <li><router-link to="/">Propietario</router-link></li> |
-                    <li><router-link to="/">Oficios</router-link></li>
+                    <li><a style="color: #E55E5E; cursor: pointer" @click="cerrarSesion">Cerrar sesión</a></li>
                     <li class="li-registro"><router-link to="/">{{ user.name }}</router-link></li>
                 </ul>
             </nav>
@@ -38,8 +38,11 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapActions, mapState } from 'vuex'
 export default {
+    methods: {
+        ...mapActions(['cerrarSesion'])
+    },
     computed: {
         ...mapState(['user'])
     },

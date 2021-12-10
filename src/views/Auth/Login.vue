@@ -47,7 +47,7 @@ export default {
     },
     methods: {
         procesarFormulario() {
-			const credentials ={'user': this.user,'password': this.password}
+			const credentials ={'email': this.user,'password': this.password}
 			store.dispatch('ingresoUsuario',credentials) // triggering action from store
 		}
     },

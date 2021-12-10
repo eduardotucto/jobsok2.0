@@ -30,7 +30,6 @@ export default {
             Technician.show(id)
             .then((resp) => {
                 this.technicianData = resp.data.technician
-                console.log(resp.data.technician)
             }).catch((err) => {
                 console.log(err.message)
             });

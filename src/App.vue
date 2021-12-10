@@ -7,7 +7,7 @@ import store from './store';
 
 export default {
   created () {
-    store.dispatch('gettingUser');
+    store.dispatch('cargarLocalStorage');
   },
 }
 </script>
